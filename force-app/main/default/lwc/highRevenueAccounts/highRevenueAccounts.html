@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="High Revenue Records using wire Approach">
+        <lightning-input label="Number of Records" title="Number of Records" type="number"
+            onkeyup={setCount}></lightning-input>
+    </lightning-card>
+    <template for:each={accountsToDisplay} for:item="account">
+        <lightning-card key={account.Id} title="High Revenue Accounts">
+            <p>Name: {account.Name}</p>
+            <h1>AnnualRevenue: {account.AnnualRevenue}</h1>
+        </lightning-card>
+    </template>
+</template>

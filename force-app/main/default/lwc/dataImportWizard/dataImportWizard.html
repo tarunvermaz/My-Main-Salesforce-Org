@@ -1,0 +1,60 @@
+
+<template>
+    <lightning-card title="Data Import Wizard" icon-name="utility:upload">
+        <div class="slds-p-around_medium">
+            <!-- CSV upload field -->
+            <lightning-input
+                type="file"
+                label="Upload CSV File"
+                accept=".csv"
+                onchange={handleFileChange}>
+            </lightning-input>
+            <template if:true={fileName}>
+                <p class="slds-m-top_small">
+                    File: {fileName}
+                </p>
+            </template>
+            <!-- Ye dropdown Salesforce objects show karta hai. -->
+            <lightning-combobox
+                class="slds-m-top_medium"
+                label="Select Salesforce Object"
+                value={selectedObject}
+                options={objectOptions}
+                onchange={handleObjectChange}>
+            </lightning-combobox>
+            <!-- Fields mapping section -->
+            <template if:true={fields.length}>
+                <h2 class="slds-text-heading_medium slds-m-top_large">
+                    Field Mapping
+                </h2>
+                <!-- Ye fields array ke har item par loop chalata hai. -->
+                <template for:each={fields} for:item="field">
+                    <div key={field.value} class="mapping-row">
+
+                        <span>{field.label}</span>
+                        <!-- CSV column dropdown -->
+                        <lightning-combobox
+                            label="CSV Column"
+                            variant="label-hidden"
+                            placeholder="Select Column"
+                            options={csvOptions}
+                            data-field={field.value}
+                            value={field.csvColumn}
+                            onchange={handleMappingChange}>
+                        </lightning-combobox>
+
+                    </div>
+                </template>
+            </template>
+            <!-- Import button -->
+            <lightning-button
+                class="slds-m-top_medium"
+                label="Import Data"
+                variant="brand"
+                onclick={handleImport}
+                disabled={isImporting}>
+            </lightning-button>
+
+        </div>
+    </lightning-card>
+</template>

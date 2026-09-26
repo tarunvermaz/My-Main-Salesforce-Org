@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global" >
+    
+    <h1>This is My First Lightning Aura Componant</h1>
+    <aura:attribute name="var1" type="String" default="Test Value"/>
+    <h1>
+        Componant Attributes Value: {!v.var1}
+    </h1>
+	
+</aura:component>

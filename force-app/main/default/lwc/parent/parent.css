@@ -1,0 +1,14 @@
+.child1{
+    color: orange;
+    size:10px;
+}
+.child2{
+    color: blue;
+    size:10px;
+}
+.child3{
+    color: rgb(40, 189, 6);
+    size:10px;
+    display: block;
+    background-color: rgb(206, 209, 210);
+}

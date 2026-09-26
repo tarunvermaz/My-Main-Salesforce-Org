@@ -1,0 +1,60 @@
+<!--(1) lightning-record-form -->
+
+<!--<template>
+    <lightning-record-form
+    object-api-name={objectApiName}
+    record-id={recordId}
+    fields={fields}
+>
+</lightning-record-form>
+</template>
+-->
+
+<!--(2) lightning-record-view-form (Read Only) -->
+
+<!-- <template>
+
+    <lightning-card title="View Account">
+
+        <lightning-record-view-form
+            record-id={recordId}
+            object-api-name="Account">
+
+            <lightning-output-field field-name="Name">
+            </lightning-output-field>
+
+            <lightning-output-field field-name="Phone">
+            </lightning-output-field>
+
+        </lightning-record-view-form>
+
+    </lightning-card>
+
+</template> -->
+
+<!-- 3. lightning-record-edit-form (Custom Form) -->
+
+<template>
+
+    <lightning-card title="Edit Account">
+
+        <lightning-record-edit-form
+            object-api-name="Account"
+            record-id={recordId}>
+
+            <lightning-input-field field-name="Name">
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Phone">
+            </lightning-input-field>
+
+            <lightning-button
+                type="submit"
+                label="Save">
+            </lightning-button>
+
+        </lightning-record-edit-form>
+
+    </lightning-card>
+
+</template>

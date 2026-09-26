@@ -1,0 +1,13 @@
+<aura:component>
+    <aura:attribute name="Message1" type="String" default="Test Value1"/>
+    <aura:attribute name="Message2" type="String" default="Test Value2"/>
+
+    Hello : {!v.Message}
+    <br/>
+    <lightning:button label="First Button" onclick="{!c.handleclick}"/>
+    <hr/>
+    Hello : {!v.Message2}
+    <br/>
+    <lightning:button label="Second Button" onclick="{!c.handleclick}"/>
+    
+</aura:component>

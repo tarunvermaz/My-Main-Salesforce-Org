@@ -1,0 +1,15 @@
+<template>
+    <!-- {uppercaseItemName} -->
+
+    <lightning-card>
+        Hello, {firstName}!
+    </lightning-card>
+
+    <!-- User clicks button in Child.
+Child fires event: -->
+    <template lwc:if={showButton}>
+        <lightning-button label="Click Me" onclick={handleClick}>
+        </lightning-button>
+    </template>
+
+</template>

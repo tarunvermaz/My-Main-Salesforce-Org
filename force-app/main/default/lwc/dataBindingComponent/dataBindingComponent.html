@@ -1,0 +1,25 @@
+<template>
+    <!--Data Binding with the help of Normal Properties-->
+    <lightning-card>
+        <p>Tarun Bhaiya, {Greeting}!</p>
+    </lightning-card>
+
+    <!--Data Binding with the help of Getter-->
+    <lightning-card>
+        <div class="slds-m-around_medium">
+            <lightning-input name="fname" label="First Name" onchange={handleChange}></lightning-input>
+            <lightning-input name="lname" label="Last Name" onchange={handleChange}></lightning-input>
+            <p class="slds-m-top_medium">UpperCased Full Name: {upperCasedFullName}</p>
+        </div>
+    </lightning-card>
+
+    <!-- Data Binding with the help of querySelector -->
+    <lightning-card>
+        <h1>Hello From My first Lightning web Component {firstName}</h1>
+        <hr />
+        <lightning-input data-id="nameInput" type="text" label="Enter Name">
+        </lightning-input>
+        <lightning-button onclick={handleClick} label="clickme" variant="neutral">
+        </lightning-button>
+    </lightning-card>
+</template>
